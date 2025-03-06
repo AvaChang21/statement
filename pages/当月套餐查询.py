@@ -260,6 +260,11 @@ uploaded_file = st.file_uploader("上传 Excel 文件", type=["xlsx", "xls"])
 
 rename_file = st.file_uploader('如有用户更名，请上传表格', type=["xlsx"])
 
+rename = pd.DataFrame(columns=['零售用户名称', '套餐表格原称'])
+rename.loc[0] = ['新名称', '原名称']
+st.write('更名表模板')
+st.write(rename)
+
 if uploaded_file:
     xls = pd.ExcelFile(uploaded_file)
     sheet_names = xls.sheet_names
