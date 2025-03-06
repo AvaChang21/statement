@@ -50,6 +50,7 @@ def repack_data(data):
             aa['零售用户名称'] = a['零售用户名称']
             aa['合同开始日期'] = a['合同开始日期']
             aa['合同结束日期'] = a['合同结束日期']
+            aa['固定价格比例'] = a['固定价格电量比例']
             aa['固定价格'] = a['零售固定成交价']
 
             bb['零售用户名称'] = b['零售用户名称']
@@ -87,6 +88,7 @@ def repack_data(data):
             ndf['零售用户名称'] = v['零售用户名称']
             ndf['合同开始日期'] = v['合同开始日期']
             ndf['合同结束日期'] = v['合同结束日期']
+            ndf['固定价格比例'] = v['固定价格电量比例']
             ndf['固定价格'] = v['零售固定成交价/相对让利价']
 
             clean_data[k] = ndf
@@ -95,6 +97,7 @@ def repack_data(data):
             ndf['零售用户名称'] = v['零售用户名称']
             ndf['合同开始日期'] = v['合同开始日期']
             ndf['合同结束日期'] = v['合同结束日期']
+            ndf['固定价格比例'] = v['固定价格类比例']
             ndf['固定价格'] = v['固定价格']
 
             clean_data[k] = ndf
@@ -241,6 +244,7 @@ def repack_data(data):
             clean_data[k] = ndf
 
     return clean_data
+
 
 
 def find_date(df, year_month):
