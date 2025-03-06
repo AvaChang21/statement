@@ -6,7 +6,7 @@ import io
 
 def read_sheets(df):
     data = {}
-    for name in df.sheet_names[:6]:
+    for name in df.sheet_names:
         df_pre = df.parse(sheet_name=name)
         data[name] = df_pre
 
